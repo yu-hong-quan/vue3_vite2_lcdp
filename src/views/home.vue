@@ -9,5 +9,11 @@
     </a>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { useUserStore } from "@/store/user";
+const userStore = useUserStore();
+
+//  修改State   调用actions中的方法
+userStore.updateName("李四");
+</script>
 <style lang="scss" scoped></style>

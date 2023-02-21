@@ -3,11 +3,7 @@
  * @Date: 2023-02-21 10:09:22
 -->
 <script setup>
-import { useUserStore } from "./store/user";
-const userStore = useUserStore();
 
-//  修改State   actions中
-userStore.updateName("李四");
 </script>
 
 <template>

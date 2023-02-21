@@ -4,9 +4,9 @@
  */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path' 
-const pathResolve = (dir) => {  
-  return resolve(__dirname, ".", dir)          
+import { resolve } from 'path'
+const pathResolve = (dir) => {
+  return resolve(__dirname, ".", dir)
 }
 
 const alias = {
@@ -23,7 +23,8 @@ export default defineConfig({
     //   cache: false // 禁用 eslint 缓存
     // })
   ],
-  resolve: {  // *** 路径配置新增
-    alias     // ******** 路径配置新增
-  } 
+  resolve: {  // *** 路径配置
+    alias,    
+    "vue/multi-word-component-names": 0
+  }
 })
