@@ -3,17 +3,15 @@
  * @Date: 2023-02-21 10:09:22
 -->
 <script setup>
-
+defineProps({
+  name: "custom-component",
+});
 </script>
 
 <template>
-  <!-- 路由容器 -->
-  <router-view></router-view>
+  业务组件
 </template>
 
 <style lang="scss">
-body,html,#app{
-  width: 100%;
-  height: 100%;
-}
+
 </style>
