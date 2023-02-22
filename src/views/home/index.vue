@@ -10,19 +10,15 @@
     <pageLeft/>
   </div>
 </template>
+
 <script setup>
-import { useUserStore } from "@/store/user";
 import pageHead from '@/components/layout/pageHead/index.vue'
 import pageLeft from '@/components/layout/pageLeft/index.vue'
 defineOptions({
   name: "pageHome",
 });
-
-const userStore = useUserStore();
-
-//  修改State   调用actions中的方法
-userStore.updateName("李四");
 </script>
+
 <style lang="scss" scoped>
 .home{
   width: 100%;
