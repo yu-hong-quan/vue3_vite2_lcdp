@@ -11,19 +11,31 @@ const usePageStore = defineStore({
   state: () => {
     return {
       pageList: [],
-      pageActivte:'首页'
+      pageActivte: '首页'
     }
   },
   actions: {
-    async addPageItem(old){
+    addPageItem(old) {
       console.log(old);
-      this.pageList = old
+      this.pageList.push(old)
     },
-    async updatePageItem(val){
-      this.pageList = val
+    updatePageItem(val) {
+      this.pageList.forEach(item => {
+        if (item.title == val.title) {
+          item.title = val.title
+          item.page = val.page
+        }
+      });
     },
-    async deletePageItem(val){
-      this.pageList = val
+    deletePageItem(val) {
+      let newArr = []
+      for (let i = 0; i < this.pageList.length; i++) {
+        const item = this.pageList[i];
+        if (item.title != val) {
+          newArr.push(item)
+        }
+      }
+      this.pageList = newArr;
     }
   },
   mutations: {
