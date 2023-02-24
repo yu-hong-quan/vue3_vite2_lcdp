@@ -13,9 +13,10 @@ const activeName = ref(tabsData[0].name);
 let scrollbarHeight = ref(0)
 onMounted(()=>{
   scrollbarHeight.value = document.documentElement.clientHeight * 0.934 + "px"
-  window.onresize = () => {
-    if (scrollbarHeight) scrollbarHeight.value = document.documentElement.clientHeight * 0.934 + "px"
-  };
+  console.log(document.getSelection('.el-tabs__header'));
+  // window.onresize = () => {
+  //   if (scrollbarHeight) scrollbarHeight.value = document.documentElement.clientHeight * 0.934 + "px"
+  // };
 }) 
 </script>
 
@@ -38,8 +39,10 @@ onMounted(()=>{
 </template>
 
 <style lang="scss" scoped>
+
 .left-aside {
   width: 380px;
+  min-width: 380px;
   padding-top: 80px;
   height: 100%;
   contain: layout;
@@ -64,7 +67,6 @@ onMounted(()=>{
       }
     }
   }
-
   > :deep(.el-tabs__content) {
     height: 100%;
   }
