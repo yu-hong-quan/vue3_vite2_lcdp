@@ -7,11 +7,11 @@ import { ref, reactive, onMounted } from "vue";
 import { Plus, MoreFilled, Edit, Delete, Paperclip } from "@element-plus/icons-vue";
 import ComDialog from "@/components/work/comDialog/index.vue";
 import { storeToRefs } from "pinia";
-import userStore from "@/store";
+import commonStore from "@/store";
 defineProps({
   name: "page-tree",
 });
-const { page } = userStore();
+const { page } = commonStore();
 const { addPageItem, updatePageItem, deletePageItem } = page;
 //使用storeToRefs可以保证解构出来的数据也是响应式的
 const { pageList, pageActivte } = storeToRefs(page);

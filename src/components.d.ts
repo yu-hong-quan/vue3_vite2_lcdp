@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BaseWidgets: typeof import('./components/layout/pageLeft/base-widgets/index.vue')['default']
     ComDialog: typeof import('./components/work/comDialog/index.vue')['default']
+    ComText: typeof import('./components/work/comText/index.vue')['default']
     ContainerComponent: typeof import('./components/layout/pageLeft/container-component/index.vue')['default']
     copy: typeof import('./components/layout/pageLeft/custom-component copy/index.vue')['default']
     CustomComponent: typeof import('./components/layout/pageLeft/custom-component/index.vue')['default']
@@ -43,5 +44,6 @@ declare module '@vue/runtime-core' {
     PageTree: typeof import('./components/layout/pageLeft/page-tree/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VanButton: typeof import('vant/es')['Button']
   }
 }

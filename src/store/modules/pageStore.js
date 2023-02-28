@@ -15,9 +15,9 @@ const usePageStore = defineStore({
     }
   },
   actions: {
-    addPageItem(old) {
-      console.log(old);
-      this.pageList.push(old)
+    addPageItem(val) {
+      console.log(val);
+      this.pageList.push(val)
     },
     updatePageItem(val) {
       this.pageList.forEach(item => {
